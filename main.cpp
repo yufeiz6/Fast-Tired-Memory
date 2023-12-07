@@ -36,8 +36,12 @@ int main(int argc, char *argv[]) {
             }
             osInstance.switchToProcess(pid);
             auto& segmentAccessMap = osInstance.runningProc->hugePageSegmentAccessMap;
+            auto& pageSizeToSegmentCountMap = osInstance.pageSizeToSegmentCountMap;
             for (const auto& hugePageEntry : segmentAccessMap) {
                   cout << "Huge Page PFN: " << hugePageEntry.first << endl;
+
+                  uint32_t numSegments = pageSizeToSegmentCountMap[hugePageEntry.first];
+                  cout << "  Total 4KB segments in this huge page: " << numSegments << endl;
                   for (const auto& segmentEntry : hugePageEntry.second) {
                       cout << "  4KB Segment Offset: " << segmentEntry.first 
                           << ", Access Count: " << segmentEntry.second << endl;
@@ -51,7 +55,15 @@ int main(int argc, char *argv[]) {
             osInstance.handleInstruction(instruction, value, pid);
         }
     }
-       
+
+    cout << "Cache Hits: " << osInstance.cacheHit << endl;
+    cout << "Cache Misses: " << osInstance.cacheMiss << endl;
+    if (osInstance.cacheHit + osInstance.cacheMiss > 0) {
+        double hitRate = static_cast<double>(osInstance.cacheHit) / 
+                        (osInstance.cacheHit + osInstance.cacheMiss);
+        cout << "Cache Hit Rate: " << hitRate << endl;
+    }
+   
     cout << "Total memory access attempts: " << memory_access_attempts << endl;
     inputFile.close();
 

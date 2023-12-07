@@ -19,11 +19,13 @@ int memory_access_attempts = 0;
 
 using namespace std;
 
-
 os::os(size_t memorySize, size_t diskSize, uint32_t high_watermarkGiven,
        uint32_t low_watermarkGiven)
     : minPageSize(4096), memoryMap(memorySize / minPageSize, false),
       //diskMap(diskSize / minPageSize, false),
+      cache(),
+      cacheHit(0), cacheMiss(0),
+      pageSizeToSegmentCountMap(),
       high_watermark(high_watermarkGiven), low_watermark(low_watermarkGiven),
       totalFreeSize(-1), tlb(Tlb(64, 1024, 4)) {
 }
@@ -257,9 +259,14 @@ void os::accessMemory(uint32_t address) {
     memory_access_attempts++;
     auto pte = runningProc->pageTable.translate(address);
     if (pte.page_size >= HUGE_PAGE_SIZE) {
+        uint32_t numSegments = pte.page_size / minPageSize;
         uint32_t hugePagePFN = pte.pfn;
         uint32_t segmentOffset = (address % HUGE_PAGE_SIZE) / minPageSize; // 4 KB segment offset
-        runningProc->hugePageSegmentAccessMap[hugePagePFN][segmentOffset]++;
+        CacheKey key(hugePagePFN, segmentOffset);
+        accessCache(key);
+        pageSizeToSegmentCountMap[hugePagePFN] = numSegments;
+        runningProc->hugePageSegmentAccessMap[hugePagePFN][segmentOffset]++; // Increment access count by locating the subpage under the huge page
+        //because there are multiple access to one subpage in huge page
     }
     try {
         auto addr = tlb.look_up(address, runningProc->pid);
@@ -270,6 +277,29 @@ void os::accessMemory(uint32_t address) {
         auto addr = tlb.look_up(address, runningProc->pid);
     }
 }
+
+void os::accessCache(const CacheKey& key) {
+    auto it = cache.find(key);
+    if (it != cache.end()) {
+        // Cache hit: Increment access frequency
+        cacheHit++;
+        it->second++;  // Increment frequency
+    } else {
+        // Cache miss
+        cacheMiss++;
+        if (cache.size() >= Cache_Size) {
+            // Evict the least frequently used entry
+            auto lfu = std::min_element(cache.begin(), cache.end(), 
+                [](const auto& a, const auto& b) { return a.second < b.second; });
+            if (lfu != cache.end()) {
+                cache.erase(lfu);
+            }
+        }
+        // Add the new entry with an initial frequency of 1
+        cache[key] = 1;
+    }
+}
+
 
 void os::switchToProcess(uint32_t pid) {
     auto it = find_if(processes.begin(), processes.end(), [pid](const process& proc) {
