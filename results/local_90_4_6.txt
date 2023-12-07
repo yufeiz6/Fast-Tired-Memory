@@ -1,0 +1,10 @@
+TLB initialized
+OS initialized
+Total memory access attempts: 36597
+Code miss:    7
+Stack miss:   4
+Heap miss:    815
+TLB misses:   826
+TLB hit rate: 0.97743
+L1 hit rate:  0.95669
+L2 hit rate:  0.657404

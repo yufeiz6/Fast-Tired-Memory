@@ -1,0 +1,900 @@
+TLB initialized
+OS initialized
+Total memory access attempts: 9195
+Code miss:    203
+Stack miss:   102
+Heap miss:    1713
+TLB misses:   2018
+TLB hit rate: 0.780533
+L1 hit rate:  1
+L2 hit rate:  0
+TLB initialized
+OS initialized
+Total memory access attempts: 9178
+Code miss:    197
+Stack miss:   104
+Heap miss:    1670
+TLB misses:   1971
+TLB hit rate: 0.785247
+L1 hit rate:  1
+L2 hit rate:  0
+TLB initialized
+OS initialized
+Total memory access attempts: 9162
+Code miss:    200
+Stack miss:   123
+Heap miss:    1723
+TLB misses:   2046
+TLB hit rate: 0.776686
+L1 hit rate:  1
+L2 hit rate:  0
+TLB initialized
+OS initialized
+Total memory access attempts: 9192
+Code miss:    208
+Stack miss:   101
+Heap miss:    1708
+TLB misses:   2017
+TLB hit rate: 0.78057
+L1 hit rate:  1
+L2 hit rate:  0
+TLB initialized
+OS initialized
+Total memory access attempts: 9080
+Code miss:    216
+Stack miss:   119
+Heap miss:    1716
+TLB misses:   2051
+TLB hit rate: 0.774119
+L1 hit rate:  1
+L2 hit rate:  0
+TLB initialized
+OS initialized
+Total memory access attempts: 9220
+Code miss:    202
+Stack miss:   93
+Heap miss:    1685
+TLB misses:   1980
+TLB hit rate: 0.785249
+L1 hit rate:  1
+L2 hit rate:  0
+TLB initialized
+OS initialized
+Total memory access attempts: 9182
+Code miss:    203
+Stack miss:   106
+Heap miss:    1806
+TLB misses:   2115
+TLB hit rate: 0.769658
+L1 hit rate:  1
+L2 hit rate:  0
+TLB initialized
+OS initialized
+Total memory access attempts: 9173
+Code miss:    204
+Stack miss:   100
+Heap miss:    1770
+TLB misses:   2074
+TLB hit rate: 0.773902
+L1 hit rate:  1
+L2 hit rate:  0
+TLB initialized
+OS initialized
+Total memory access attempts: 9181
+Code miss:    250
+Stack miss:   133
+Heap miss:    1832
+TLB misses:   2215
+TLB hit rate: 0.758741
+L1 hit rate:  1
+L2 hit rate:  0
+TLB initialized
+OS initialized
+Total memory access attempts: 9189
+Code miss:    185
+Stack miss:   85
+Heap miss:    1725
+TLB misses:   1995
+TLB hit rate: 0.782893
+L1 hit rate:  1
+L2 hit rate:  0
+TLB initialized
+OS initialized
+Total memory access attempts: 36796
+Code miss:    843
+Stack miss:   423
+Heap miss:    6951
+TLB misses:   8217
+TLB hit rate: 0.776688
+L1 hit rate:  1
+L2 hit rate:  0
+TLB initialized
+OS initialized
+Total memory access attempts: 36685
+Code miss:    791
+Stack miss:   394
+Heap miss:    6891
+TLB misses:   8076
+TLB hit rate: 0.779856
+L1 hit rate:  1
+L2 hit rate:  0
+TLB initialized
+OS initialized
+Total memory access attempts: 36723
+Code miss:    799
+Stack miss:   378
+Heap miss:    6794
+TLB misses:   7971
+TLB hit rate: 0.782943
+L1 hit rate:  1
+L2 hit rate:  0
+TLB initialized
+OS initialized
+Total memory access attempts: 36752
+Code miss:    790
+Stack miss:   395
+Heap miss:    7049
+TLB misses:   8234
+TLB hit rate: 0.775958
+L1 hit rate:  1
+L2 hit rate:  0
+TLB initialized
+OS initialized
+Total memory access attempts: 36799
+Code miss:    816
+Stack miss:   406
+Heap miss:    7149
+TLB misses:   8371
+TLB hit rate: 0.772521
+L1 hit rate:  1
+L2 hit rate:  0
+TLB initialized
+OS initialized
+Total memory access attempts: 36714
+Code miss:    814
+Stack miss:   419
+Heap miss:    7022
+TLB misses:   8255
+TLB hit rate: 0.775154
+L1 hit rate:  1
+L2 hit rate:  0
+TLB initialized
+OS initialized
+Total memory access attempts: 36706
+Code miss:    800
+Stack miss:   403
+Heap miss:    6832
+TLB misses:   8035
+TLB hit rate: 0.781098
+L1 hit rate:  1
+L2 hit rate:  0
+TLB initialized
+OS initialized
+Total memory access attempts: 36679
+Code miss:    824
+Stack miss:   425
+Heap miss:    6982
+TLB misses:   8231
+TLB hit rate: 0.775594
+L1 hit rate:  1
+L2 hit rate:  0
+TLB initialized
+OS initialized
+Total memory access attempts: 36761
+Code miss:    835
+Stack miss:   439
+Heap miss:    6980
+TLB misses:   8254
+TLB hit rate: 0.775469
+L1 hit rate:  1
+L2 hit rate:  0
+TLB initialized
+OS initialized
+Total memory access attempts: 36807
+Code miss:    824
+Stack miss:   384
+Heap miss:    7044
+TLB misses:   8252
+TLB hit rate: 0.775804
+L1 hit rate:  1
+L2 hit rate:  0
+TLB initialized
+OS initialized
+Total memory access attempts: 73550
+Code miss:    1617
+Stack miss:   837
+Heap miss:    13907
+TLB misses:   16361
+TLB hit rate: 0.777553
+L1 hit rate:  1
+L2 hit rate:  0
+TLB initialized
+OS initialized
+Total memory access attempts: 73177
+Code miss:    1554
+Stack miss:   797
+Heap miss:    13722
+TLB misses:   16073
+TLB hit rate: 0.780354
+L1 hit rate:  1
+L2 hit rate:  0
+TLB initialized
+OS initialized
+Total memory access attempts: 73578
+Code miss:    1619
+Stack miss:   795
+Heap miss:    13689
+TLB misses:   16103
+TLB hit rate: 0.781144
+L1 hit rate:  1
+L2 hit rate:  0
+TLB initialized
+OS initialized
+Total memory access attempts: 73365
+Code miss:    1651
+Stack miss:   832
+Heap miss:    13857
+TLB misses:   16340
+TLB hit rate: 0.777278
+L1 hit rate:  1
+L2 hit rate:  0
+TLB initialized
+OS initialized
+Total memory access attempts: 73286
+Code miss:    1662
+Stack miss:   847
+Heap miss:    13946
+TLB misses:   16455
+TLB hit rate: 0.775469
+L1 hit rate:  1
+L2 hit rate:  0
+TLB initialized
+OS initialized
+Total memory access attempts: 73608
+Code miss:    1619
+Stack miss:   808
+Heap miss:    13911
+TLB misses:   16338
+TLB hit rate: 0.77804
+L1 hit rate:  1
+L2 hit rate:  0
+TLB initialized
+OS initialized
+Total memory access attempts: 73167
+Code miss:    1608
+Stack miss:   799
+Heap miss:    14020
+TLB misses:   16427
+TLB hit rate: 0.775486
+L1 hit rate:  1
+L2 hit rate:  0
+TLB initialized
+OS initialized
+Total memory access attempts: 73388
+Code miss:    1623
+Stack miss:   837
+Heap miss:    13885
+TLB misses:   16345
+TLB hit rate: 0.77728
+L1 hit rate:  1
+L2 hit rate:  0
+TLB initialized
+OS initialized
+Total memory access attempts: 73312
+Code miss:    1611
+Stack miss:   889
+Heap miss:    13886
+TLB misses:   16386
+TLB hit rate: 0.77649
+L1 hit rate:  1
+L2 hit rate:  0
+TLB initialized
+OS initialized
+Total memory access attempts: 73314
+Code miss:    1656
+Stack miss:   836
+Heap miss:    13885
+TLB misses:   16377
+TLB hit rate: 0.776618
+L1 hit rate:  1
+L2 hit rate:  0
+TLB initialized
+OS initialized
+Total memory access attempts: 9104
+Code miss:    235
+Stack miss:   119
+Heap miss:    430
+TLB misses:   784
+TLB hit rate: 0.913884
+L1 hit rate:  1
+L2 hit rate:  0
+TLB initialized
+OS initialized
+Total memory access attempts: 9154
+Code miss:    207
+Stack miss:   100
+Heap miss:    1190
+TLB misses:   1497
+TLB hit rate: 0.836465
+L1 hit rate:  1
+L2 hit rate:  0
+TLB initialized
+OS initialized
+Total memory access attempts: 9197
+Code miss:    179
+Stack miss:   87
+Heap miss:    1216
+TLB misses:   1482
+TLB hit rate: 0.83886
+L1 hit rate:  1
+L2 hit rate:  0
+TLB initialized
+OS initialized
+Total memory access attempts: 9231
+Code miss:    224
+Stack miss:   116
+Heap miss:    1284
+TLB misses:   1624
+TLB hit rate: 0.824071
+L1 hit rate:  1
+L2 hit rate:  0
+TLB initialized
+OS initialized
+Total memory access attempts: 9096
+Code miss:    198
+Stack miss:   110
+Heap miss:    1261
+TLB misses:   1569
+TLB hit rate: 0.827507
+L1 hit rate:  1
+L2 hit rate:  0
+TLB initialized
+OS initialized
+Total memory access attempts: 9180
+Code miss:    204
+Stack miss:   109
+Heap miss:    1225
+TLB misses:   1538
+TLB hit rate: 0.832462
+L1 hit rate:  1
+L2 hit rate:  0
+TLB initialized
+OS initialized
+Total memory access attempts: 9257
+Code miss:    182
+Stack miss:   86
+Heap miss:    1182
+TLB misses:   1450
+TLB hit rate: 0.843362
+L1 hit rate:  1
+L2 hit rate:  0
+TLB initialized
+OS initialized
+Total memory access attempts: 9201
+Code miss:    202
+Stack miss:   111
+Heap miss:    1268
+TLB misses:   1581
+TLB hit rate: 0.828171
+L1 hit rate:  1
+L2 hit rate:  0
+TLB initialized
+OS initialized
+Total memory access attempts: 9097
+Code miss:    219
+Stack miss:   116
+Heap miss:    1220
+TLB misses:   1555
+TLB hit rate: 0.829065
+L1 hit rate:  1
+L2 hit rate:  0
+TLB initialized
+OS initialized
+Total memory access attempts: 9158
+Code miss:    200
+Stack miss:   101
+Heap miss:    1304
+TLB misses:   1605
+TLB hit rate: 0.824743
+L1 hit rate:  1
+L2 hit rate:  0
+TLB initialized
+OS initialized
+Total memory access attempts: 36733
+Code miss:    756
+Stack miss:   359
+Heap miss:    4830
+TLB misses:   5945
+TLB hit rate: 0.838156
+L1 hit rate:  1
+L2 hit rate:  0
+TLB initialized
+OS initialized
+Total memory access attempts: 36792
+Code miss:    764
+Stack miss:   384
+Heap miss:    4872
+TLB misses:   6020
+TLB hit rate: 0.836377
+L1 hit rate:  1
+L2 hit rate:  0
+TLB initialized
+OS initialized
+Total memory access attempts: 36714
+Code miss:    831
+Stack miss:   404
+Heap miss:    4904
+TLB misses:   6139
+TLB hit rate: 0.832789
+L1 hit rate:  1
+L2 hit rate:  0
+TLB initialized
+OS initialized
+Total memory access attempts: 36859
+Code miss:    832
+Stack miss:   381
+Heap miss:    4918
+TLB misses:   6131
+TLB hit rate: 0.833663
+L1 hit rate:  1
+L2 hit rate:  0
+TLB initialized
+OS initialized
+Total memory access attempts: 36658
+Code miss:    771
+Stack miss:   349
+Heap miss:    4915
+TLB misses:   6035
+TLB hit rate: 0.83537
+L1 hit rate:  1
+L2 hit rate:  0
+TLB initialized
+OS initialized
+Total memory access attempts: 36643
+Code miss:    788
+Stack miss:   421
+Heap miss:    4971
+TLB misses:   6180
+TLB hit rate: 0.831346
+L1 hit rate:  1
+L2 hit rate:  0
+TLB initialized
+OS initialized
+Total memory access attempts: 36647
+Code miss:    798
+Stack miss:   420
+Heap miss:    4822
+TLB misses:   6040
+TLB hit rate: 0.835184
+L1 hit rate:  1
+L2 hit rate:  0
+TLB initialized
+OS initialized
+Total memory access attempts: 36723
+Code miss:    830
+Stack miss:   403
+Heap miss:    5123
+TLB misses:   6356
+TLB hit rate: 0.82692
+L1 hit rate:  1
+L2 hit rate:  0
+TLB initialized
+OS initialized
+Total memory access attempts: 36700
+Code miss:    798
+Stack miss:   383
+Heap miss:    4865
+TLB misses:   6046
+TLB hit rate: 0.835259
+L1 hit rate:  1
+L2 hit rate:  0
+TLB initialized
+OS initialized
+Total memory access attempts: 36822
+Code miss:    856
+Stack miss:   414
+Heap miss:    4904
+TLB misses:   6174
+TLB hit rate: 0.832328
+L1 hit rate:  1
+L2 hit rate:  0
+TLB initialized
+OS initialized
+Total memory access attempts: 73333
+Code miss:    1608
+Stack miss:   800
+Heap miss:    9962
+TLB misses:   12370
+TLB hit rate: 0.831317
+L1 hit rate:  1
+L2 hit rate:  0
+TLB initialized
+OS initialized
+Total memory access attempts: 73452
+Code miss:    1542
+Stack miss:   767
+Heap miss:    9954
+TLB misses:   12263
+TLB hit rate: 0.833047
+L1 hit rate:  1
+L2 hit rate:  0
+TLB initialized
+OS initialized
+Total memory access attempts: 73468
+Code miss:    1616
+Stack miss:   806
+Heap miss:    9831
+TLB misses:   12253
+TLB hit rate: 0.83322
+L1 hit rate:  1
+L2 hit rate:  0
+TLB initialized
+OS initialized
+Total memory access attempts: 73438
+Code miss:    1601
+Stack miss:   804
+Heap miss:    9930
+TLB misses:   12335
+TLB hit rate: 0.832035
+L1 hit rate:  1
+L2 hit rate:  0
+TLB initialized
+OS initialized
+Total memory access attempts: 73426
+Code miss:    1585
+Stack miss:   775
+Heap miss:    9876
+TLB misses:   12236
+TLB hit rate: 0.833356
+L1 hit rate:  1
+L2 hit rate:  0
+TLB initialized
+OS initialized
+Total memory access attempts: 73258
+Code miss:    1585
+Stack miss:   811
+Heap miss:    9903
+TLB misses:   12299
+TLB hit rate: 0.832114
+L1 hit rate:  1
+L2 hit rate:  0
+TLB initialized
+OS initialized
+Total memory access attempts: 73305
+Code miss:    1624
+Stack miss:   818
+Heap miss:    9912
+TLB misses:   12354
+TLB hit rate: 0.831471
+L1 hit rate:  1
+L2 hit rate:  0
+TLB initialized
+OS initialized
+Total memory access attempts: 73354
+Code miss:    1700
+Stack miss:   857
+Heap miss:    9933
+TLB misses:   12490
+TLB hit rate: 0.82973
+L1 hit rate:  1
+L2 hit rate:  0
+TLB initialized
+OS initialized
+Total memory access attempts: 73467
+Code miss:    1606
+Stack miss:   774
+Heap miss:    9879
+TLB misses:   12259
+TLB hit rate: 0.833136
+L1 hit rate:  1
+L2 hit rate:  0
+TLB initialized
+OS initialized
+Total memory access attempts: 73431
+Code miss:    1580
+Stack miss:   793
+Heap miss:    9903
+TLB misses:   12276
+TLB hit rate: 0.832823
+L1 hit rate:  1
+L2 hit rate:  0
+TLB initialized
+OS initialized
+Total memory access attempts: 9266
+Code miss:    211
+Stack miss:   109
+Heap miss:    405
+TLB misses:   725
+TLB hit rate: 0.921757
+L1 hit rate:  1
+L2 hit rate:  0
+TLB initialized
+OS initialized
+Total memory access attempts: 9170
+Code miss:    199
+Stack miss:   94
+Heap miss:    426
+TLB misses:   719
+TLB hit rate: 0.921592
+L1 hit rate:  1
+L2 hit rate:  0
+TLB initialized
+OS initialized
+Total memory access attempts: 9179
+Code miss:    175
+Stack miss:   93
+Heap miss:    387
+TLB misses:   655
+TLB hit rate: 0.928641
+L1 hit rate:  1
+L2 hit rate:  0
+TLB initialized
+OS initialized
+Total memory access attempts: 9229
+Code miss:    220
+Stack miss:   112
+Heap miss:    411
+TLB misses:   743
+TLB hit rate: 0.919493
+L1 hit rate:  1
+L2 hit rate:  0
+TLB initialized
+OS initialized
+Total memory access attempts: 9138
+Code miss:    218
+Stack miss:   106
+Heap miss:    416
+TLB misses:   740
+TLB hit rate: 0.919019
+L1 hit rate:  1
+L2 hit rate:  0
+TLB initialized
+OS initialized
+Total memory access attempts: 9241
+Code miss:    208
+Stack miss:   114
+Heap miss:    405
+TLB misses:   727
+TLB hit rate: 0.921329
+L1 hit rate:  1
+L2 hit rate:  0
+TLB initialized
+OS initialized
+Total memory access attempts: 9148
+Code miss:    195
+Stack miss:   102
+Heap miss:    383
+TLB misses:   680
+TLB hit rate: 0.925667
+L1 hit rate:  1
+L2 hit rate:  0
+TLB initialized
+OS initialized
+Total memory access attempts: 9226
+Code miss:    213
+Stack miss:   101
+Heap miss:    456
+TLB misses:   770
+TLB hit rate: 0.91654
+L1 hit rate:  1
+L2 hit rate:  0
+TLB initialized
+OS initialized
+Total memory access attempts: 9143
+Code miss:    209
+Stack miss:   128
+Heap miss:    447
+TLB misses:   784
+TLB hit rate: 0.914251
+L1 hit rate:  1
+L2 hit rate:  0
+TLB initialized
+OS initialized
+Total memory access attempts: 9134
+Code miss:    229
+Stack miss:   118
+Heap miss:    449
+TLB misses:   796
+TLB hit rate: 0.912853
+L1 hit rate:  1
+L2 hit rate:  0
+TLB initialized
+OS initialized
+Total memory access attempts: 36616
+Code miss:    805
+Stack miss:   402
+Heap miss:    1712
+TLB misses:   2919
+TLB hit rate: 0.920281
+L1 hit rate:  1
+L2 hit rate:  0
+TLB initialized
+OS initialized
+Total memory access attempts: 36631
+Code miss:    784
+Stack miss:   393
+Heap miss:    1651
+TLB misses:   2828
+TLB hit rate: 0.922798
+L1 hit rate:  1
+L2 hit rate:  0
+TLB initialized
+OS initialized
+Total memory access attempts: 36635
+Code miss:    786
+Stack miss:   404
+Heap miss:    1647
+TLB misses:   2837
+TLB hit rate: 0.92256
+L1 hit rate:  1
+L2 hit rate:  0
+TLB initialized
+OS initialized
+Total memory access attempts: 36651
+Code miss:    787
+Stack miss:   383
+Heap miss:    1672
+TLB misses:   2842
+TLB hit rate: 0.922458
+L1 hit rate:  1
+L2 hit rate:  0
+TLB initialized
+OS initialized
+Total memory access attempts: 36696
+Code miss:    822
+Stack miss:   408
+Heap miss:    1701
+TLB misses:   2931
+TLB hit rate: 0.920128
+L1 hit rate:  1
+L2 hit rate:  0
+TLB initialized
+OS initialized
+Total memory access attempts: 36721
+Code miss:    805
+Stack miss:   403
+Heap miss:    1697
+TLB misses:   2905
+TLB hit rate: 0.92089
+L1 hit rate:  1
+L2 hit rate:  0
+TLB initialized
+OS initialized
+Total memory access attempts: 36597
+Code miss:    809
+Stack miss:   394
+Heap miss:    1725
+TLB misses:   2928
+TLB hit rate: 0.919993
+L1 hit rate:  1
+L2 hit rate:  0
+TLB initialized
+OS initialized
+Total memory access attempts: 36711
+Code miss:    796
+Stack miss:   399
+Heap miss:    1706
+TLB misses:   2901
+TLB hit rate: 0.920977
+L1 hit rate:  1
+L2 hit rate:  0
+TLB initialized
+OS initialized
+Total memory access attempts: 36715
+Code miss:    842
+Stack miss:   422
+Heap miss:    1676
+TLB misses:   2940
+TLB hit rate: 0.919924
+L1 hit rate:  1
+L2 hit rate:  0
+TLB initialized
+OS initialized
+Total memory access attempts: 36730
+Code miss:    788
+Stack miss:   415
+Heap miss:    1702
+TLB misses:   2905
+TLB hit rate: 0.920909
+L1 hit rate:  1
+L2 hit rate:  0
+TLB initialized
+OS initialized
+Total memory access attempts: 73396
+Code miss:    1622
+Stack miss:   801
+Heap miss:    3313
+TLB misses:   5736
+TLB hit rate: 0.921849
+L1 hit rate:  1
+L2 hit rate:  0
+TLB initialized
+OS initialized
+Total memory access attempts: 73337
+Code miss:    1610
+Stack miss:   825
+Heap miss:    3378
+TLB misses:   5813
+TLB hit rate: 0.920736
+L1 hit rate:  1
+L2 hit rate:  0
+TLB initialized
+OS initialized
+Total memory access attempts: 73724
+Code miss:    1721
+Stack miss:   839
+Heap miss:    3396
+TLB misses:   5956
+TLB hit rate: 0.919212
+L1 hit rate:  1
+L2 hit rate:  0
+TLB initialized
+OS initialized
+Total memory access attempts: 73414
+Code miss:    1599
+Stack miss:   803
+Heap miss:    3397
+TLB misses:   5799
+TLB hit rate: 0.92101
+L1 hit rate:  1
+L2 hit rate:  0
+TLB initialized
+OS initialized
+Total memory access attempts: 73334
+Code miss:    1571
+Stack miss:   787
+Heap miss:    3368
+TLB misses:   5726
+TLB hit rate: 0.921919
+L1 hit rate:  1
+L2 hit rate:  0
+TLB initialized
+OS initialized
+Total memory access attempts: 73556
+Code miss:    1578
+Stack miss:   736
+Heap miss:    3301
+TLB misses:   5615
+TLB hit rate: 0.923664
+L1 hit rate:  1
+L2 hit rate:  0
+TLB initialized
+OS initialized
+Total memory access attempts: 73471
+Code miss:    1662
+Stack miss:   860
+Heap miss:    3405
+TLB misses:   5927
+TLB hit rate: 0.919329
+L1 hit rate:  1
+L2 hit rate:  0
+TLB initialized
+OS initialized
+Total memory access attempts: 73522
+Code miss:    1619
+Stack miss:   780
+Heap miss:    3264
+TLB misses:   5663
+TLB hit rate: 0.922975
+L1 hit rate:  1
+L2 hit rate:  0
+TLB initialized
+OS initialized
+Total memory access attempts: 73423
+Code miss:    1599
+Stack miss:   768
+Heap miss:    3304
+TLB misses:   5671
+TLB hit rate: 0.922763
+L1 hit rate:  1
+L2 hit rate:  0
+TLB initialized
+OS initialized
+Total memory access attempts: 73550
+Code miss:    1623
+Stack miss:   781
+Heap miss:    3259
+TLB misses:   5663
+TLB hit rate: 0.923005
+L1 hit rate:  1
+L2 hit rate:  0
