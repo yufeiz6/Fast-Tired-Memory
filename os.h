@@ -22,6 +22,7 @@ class os {
 private:
     int minPageSize;
     //process* runningProc;
+    uint32_t HUGE_PAGE_SIZE = 16 * 4096;
     vector<bool> memoryMap;
     vector<process> processes;
     vector<bool> diskMap;
@@ -37,7 +38,7 @@ public:
     os(size_t memorySize, size_t diskSize, uint32_t high_watermarkGiven, uint32_t low_watermarkGiven);
     ~os();
     process* runningProc;
-    map<uint32_t, uint32_t> hugePageAccessMap;
+    map<uint32_t, map<uint32_t, uint32_t>> hugePageSegmentAccessMap;
     uint32_t allocateMemory(uint32_t size);
     void freeMemory(uint32_t baseAddress);
     uint32_t createProcess(long int pid);

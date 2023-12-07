@@ -256,8 +256,10 @@ uint32_t os::accessCode(uint32_t address) {
 void os::accessMemory(uint32_t address) {
     memory_access_attempts++;
     auto pte = runningProc->pageTable.translate(address);
-    if (pte.page_size >= 16 * 4096) {
-      runningProc->hugePageAccessMap[pte.pfn]++; 
+    if (pte.page_size >= HUGE_PAGE_SIZE) {
+        uint32_t hugePagePFN = pte.pfn;
+        uint32_t segmentOffset = (address % HUGE_PAGE_SIZE) / minPageSize; // 4 KB segment offset
+        runningProc->hugePageSegmentAccessMap[hugePagePFN][segmentOffset]++;
     }
     try {
         auto addr = tlb.look_up(address, runningProc->pid);

@@ -14,7 +14,7 @@ public:
     uint32_t heap;
     TwoLevelPageTable pageTable;
     process(long int pidGiven);
-    map<uint32_t, uint32_t> hugePageAccessMap;
+    map<uint32_t, map<uint32_t, uint32_t>> hugePageSegmentAccessMap;
     void allocateMem(uint32_t allocatedSize);
     void freeMem(uint32_t freedSize);
     uint32_t getHeap();

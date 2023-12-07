@@ -35,10 +35,14 @@ int main(int argc, char *argv[]) {
                 break;
             }
             osInstance.switchToProcess(pid);
-            auto& accessMap = osInstance.runningProc->hugePageAccessMap;
-            for (const auto& entry : accessMap) {
-              cout << "PFN: " << entry.first << ", Access Count: " << entry.second << endl;
-            }
+            auto& segmentAccessMap = osInstance.runningProc->hugePageSegmentAccessMap;
+            for (const auto& hugePageEntry : segmentAccessMap) {
+                  cout << "Huge Page PFN: " << hugePageEntry.first << endl;
+                  for (const auto& segmentEntry : hugePageEntry.second) {
+                      cout << "  4KB Segment Offset: " << segmentEntry.first 
+                          << ", Access Count: " << segmentEntry.second << endl;
+                  }
+              }
         } else {
             if (!(iss >> hex >> value)) {
                 cerr << "Error parsing value for instruction: " << instruction << endl;
