@@ -11,7 +11,12 @@ int main(int argc, char *argv[]) {
     uint32_t high_watermark = 200 * 1024 * 1024;
     uint32_t low_watermark = 100 * 1024 * 1024;
 
-    os osInstance(memorySize, diskSize, high_watermark, low_watermark);
+    bool cacheChoice = false; // Default strategy
+
+    std::cout << "Choose caching strategy (1 for Huge Pages, 0 for Subpages): ";
+    std::cin >> cacheChoice;
+
+    os osInstance(memorySize, diskSize, high_watermark, low_watermark, cacheChoice);
     
     ifstream inputFile(argv[1]);
     if (!inputFile) {

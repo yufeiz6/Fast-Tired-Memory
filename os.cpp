@@ -20,10 +20,12 @@ int memory_access_attempts = 0;
 using namespace std;
 
 os::os(size_t memorySize, size_t diskSize, uint32_t high_watermarkGiven,
-       uint32_t low_watermarkGiven)
+       uint32_t low_watermarkGiven, bool cacheChoice)
     : minPageSize(4096), memoryMap(memorySize / minPageSize, false),
       //diskMap(diskSize / minPageSize, false),
-      cache(),
+      cacheChoice(cacheChoice),
+      cache4KB(),
+      cacheHugePage(),
       cacheHit(0), cacheMiss(0),
       pageSizeToSegmentCountMap(),
       high_watermark(high_watermarkGiven), low_watermark(low_watermarkGiven),
@@ -258,29 +260,32 @@ uint32_t os::accessCode(uint32_t address) {
 void os::accessMemory(uint32_t address) {
     memory_access_attempts++;
     auto pte = runningProc->pageTable.translate(address);
-    /*
-    if (pte.page_size >= HUGE_PAGE_SIZE) {
-        uint32_t numSegments = pte.page_size / minPageSize;
-        uint32_t hugePagePFN = pte.pfn;
-        uint32_t segmentOffset = (address % HUGE_PAGE_SIZE) / minPageSize; // 4 KB segment offset
-        CacheKey key(hugePagePFN, segmentOffset);
-        accessCache(key);
-        pageSizeToSegmentCountMap[hugePagePFN] = numSegments;
-        runningProc->hugePageSegmentAccessMap[hugePagePFN][segmentOffset]++; // Increment access count by locating the subpage under the huge page
-        //because there are multiple access to one subpage in huge page
-    }*/
-    if (pte.page_size >= HUGE_PAGE_SIZE) {
+
+    if (cacheChoice) {
+      if (pte.page_size >= HUGE_PAGE_SIZE) {
         uint32_t numSegments = pte.page_size / minPageSize;
         uint32_t hugePagePFN = pte.pfn;
 
         // Only cache if the huge page is smaller than or equal to the cache
         if (numSegments <= Cache_Size) {
-            CacheKey key(hugePagePFN);
-            accessCache(key); // Cache the entire huge page
+          CacheKeyHugePage key(hugePagePFN);
+          accessCacheHuge(key); // Cache the entire huge page
         } else {
             // Increase cache miss if not caching the huge page
             cacheMiss++;
         }
+      }
+    } else {
+      if (pte.page_size >= HUGE_PAGE_SIZE) {
+        uint32_t numSegments = pte.page_size / minPageSize;
+        uint32_t hugePagePFN = pte.pfn;
+        uint32_t segmentOffset = (address % HUGE_PAGE_SIZE) / minPageSize; // 4 KB segment offset
+        CacheKey4KB key(hugePagePFN, segmentOffset);
+        accessCache4KB(key);
+        pageSizeToSegmentCountMap[hugePagePFN] = numSegments;
+        runningProc->hugePageSegmentAccessMap[hugePagePFN][segmentOffset]++; // Increment access count by locating the subpage under the huge page
+        //because there are multiple access to one subpage in huge page
+      }
     }
     try {
         auto addr = tlb.look_up(address, runningProc->pid);
@@ -291,26 +296,47 @@ void os::accessMemory(uint32_t address) {
         auto addr = tlb.look_up(address, runningProc->pid);
     }
 }
-
-void os::accessCache(const CacheKey& key) {
-    auto it = cache.find(key);
-    if (it != cache.end()) {
+void os::accessCacheHuge(const CacheKeyHugePage& key) {
+    auto it = cacheHugePage.find(key);
+    if (it != cacheHugePage.end()) {
         // Cache hit: Increment access frequency
         cacheHit++;
         it->second++;  // Increment frequency
     } else {
         // Cache miss
         cacheMiss++;
-        if (cache.size() >= Cache_Size) {
+        if (cacheHugePage.size() >= Cache_Size) {
             // Evict the least frequently used entry
-            auto lfu = std::min_element(cache.begin(), cache.end(), 
+            auto lfu = std::min_element(cacheHugePage.begin(), cacheHugePage.end(), 
                 [](const auto& a, const auto& b) { return a.second < b.second; });
-            if (lfu != cache.end()) {
-                cache.erase(lfu);
+            if (lfu != cacheHugePage.end()) {
+                cacheHugePage.erase(lfu);
             }
         }
         // Add the new entry with an initial frequency of 1
-        cache[key] = 1;
+        cacheHugePage[key] = 1;
+    }
+}
+
+void os::accessCache4KB(const CacheKey4KB& key) {
+    auto it = cache4KB.find(key);
+    if (it != cache4KB.end()) {
+        // Cache hit: Increment access frequency
+        cacheHit++;
+        it->second++;  // Increment frequency
+    } else {
+        // Cache miss
+        cacheMiss++;
+        if (cache4KB.size() >= Cache_Size) {
+            // Evict the least frequently used entry
+            auto lfu = std::min_element(cache4KB.begin(), cache4KB.end(), 
+                [](const auto& a, const auto& b) { return a.second < b.second; });
+            if (lfu != cache4KB.end()) {
+                cache4KB.erase(lfu);
+            }
+        }
+        // Add the new entry with an initial frequency of 1
+        cache4KB[key] = 1;
     }
 }
 
