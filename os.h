@@ -18,6 +18,7 @@ extern int stack_miss;
 extern int heap_miss;
 extern int code_miss;
 
+/* support 4kb subpages
 struct CacheKey {
     uint32_t pfn;
     uint32_t offset;
@@ -26,6 +27,17 @@ struct CacheKey {
 
     bool operator<(const CacheKey& other) const {
         return std::tie(pfn, offset) < std::tie(other.pfn, other.offset);
+    }
+};
+*/
+
+struct CacheKey {
+    uint32_t pfn;
+
+    explicit CacheKey(uint32_t pfn) : pfn(pfn) {}
+
+    bool operator<(const CacheKey& other) const {
+        return pfn < other.pfn;
     }
 };
 

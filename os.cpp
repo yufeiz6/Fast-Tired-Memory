@@ -258,6 +258,7 @@ uint32_t os::accessCode(uint32_t address) {
 void os::accessMemory(uint32_t address) {
     memory_access_attempts++;
     auto pte = runningProc->pageTable.translate(address);
+    /*
     if (pte.page_size >= HUGE_PAGE_SIZE) {
         uint32_t numSegments = pte.page_size / minPageSize;
         uint32_t hugePagePFN = pte.pfn;
@@ -267,6 +268,19 @@ void os::accessMemory(uint32_t address) {
         pageSizeToSegmentCountMap[hugePagePFN] = numSegments;
         runningProc->hugePageSegmentAccessMap[hugePagePFN][segmentOffset]++; // Increment access count by locating the subpage under the huge page
         //because there are multiple access to one subpage in huge page
+    }*/
+    if (pte.page_size >= HUGE_PAGE_SIZE) {
+        uint32_t numSegments = pte.page_size / minPageSize;
+        uint32_t hugePagePFN = pte.pfn;
+
+        // Only cache if the huge page is smaller than or equal to the cache
+        if (numSegments <= Cache_Size) {
+            CacheKey key(hugePagePFN);
+            accessCache(key); // Cache the entire huge page
+        } else {
+            // Increase cache miss if not caching the huge page
+            cacheMiss++;
+        }
     }
     try {
         auto addr = tlb.look_up(address, runningProc->pid);
