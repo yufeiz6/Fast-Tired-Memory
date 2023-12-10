@@ -1,0 +1,11 @@
+Locality: 0.2
+Subpage: 0.9313
+Hugepage: 0.5694
+
+Locality: 0.5
+Subpage: 0.957
+Hugepage: 0.5578
+
+Locality: 0.9
+Subpage: 0.9791
+Hugepage: 0.5597
